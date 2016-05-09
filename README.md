@@ -7,6 +7,8 @@
 
 [Documentation](http://opencanary.readthedocs.io/en/latest/)
 
+OpenCanary is pretty awesome and can be deployed in a bunch of different ways. I figured that combining the power of OpenCanary and it's modules with Dockers cool networking functions. The default configuration for this image is running just a few services with the default PyLogger setup.
+
 ## Building the image
 ```
 $ git clone https://github.com/dustyfresh/opencanary.git && cd opencanary && docker build --rm -t opencanary .
