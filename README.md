@@ -28,6 +28,9 @@ $ docker exec -it opencanary bash -c 'cat /var/log/opencanary.log'
 ## Logs
 As you can see from the above docker run command we are storing logs in **/var/log/opencanary.log**. You may find it necessary to create a separate volume structure for your log data.
 
+## Setting up your services
+You can modify the opencanary.conf file within the conf/ directory to specify which services you would like to advertise. You can see the code for OpenCanary's modules [here](https://github.com/thinkst/opencanary/tree/master/opencanary/modules)
+
 ## Additional documentation
 Read OpenCanary documentaton [here](http://opencanary.readthedocs.io/en/latest/)
 
