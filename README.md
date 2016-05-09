@@ -7,6 +7,8 @@
 
 [Documentation](http://opencanary.readthedocs.io/en/latest/)
 
+[Official Docker Hub](https://hub.docker.com/r/dustyfresh/opencanary/)
+
 OpenCanary is pretty awesome and can be deployed in a bunch of different ways. I figured that combining the power of OpenCanary and it's modules with Dockers cool networking functions. The default configuration for this image is running just a few services with the default PyLogger setup.
 
 ## Building the image
@@ -15,7 +17,7 @@ $ git clone https://github.com/dustyfresh/opencanary.git && cd opencanary && doc
 
 $ docker run -d -p 80:80 -p 3306:3306 -p 21:21 --name opencanary opencanary
 
-$ $ docker exec -it opencanary bash -c 'cat /var/log/opencanary.log'
+$ docker exec -it opencanary bash -c 'cat /var/log/opencanary.log'
 {"dst_host": "", "dst_port": -1, "local_time": "2016-05-09 03:17:30.363604", "logdata": {"msg": {"logdata": "Added service from class CanaryHTTP in opencanary.modules.http to fake"}}, "logtype": 1001, "node_id": "foobar.com", "src_host": "", "src_port": -1}
 {"dst_host": "", "dst_port": -1, "local_time": "2016-05-09 03:17:30.365347", "logdata": {"msg": {"logdata": "Added service from class CanaryFTP in opencanary.modules.ftp to fake"}}, "logtype": 1001, "node_id": "foobar.com", "src_host": "", "src_port": -1}
 {"dst_host": "", "dst_port": -1, "local_time": "2016-05-09 03:17:32.379704", "logdata": {"msg": {"logdata": "Added service from class CanarySSH in opencanary.modules.ssh to fake"}}, "logtype": 1001, "node_id": "foobar.com", "src_host": "", "src_port": -1}
@@ -24,4 +26,4 @@ $ $ docker exec -it opencanary bash -c 'cat /var/log/opencanary.log'
 ```
 
 ## Logs
-As you can see from the above docker run command we are storing logs in the
+As you can see from the above docker run command we are storing logs in **/var/log/opencanary.log**. You may find it necessary to create a separate volume structure for your log data.
