@@ -9,7 +9,7 @@
 
 [Official Docker Hub](https://hub.docker.com/r/dustyfresh/opencanary/)
 
-OpenCanary is pretty awesome and can be deployed in a bunch of different ways. I figured that combining the power of OpenCanary and it's modules with Dockers cool networking functions. The default configuration for this image is running just a few services with the default PyLogger setup.
+OpenCanary is pretty awesome and can be deployed in a bunch of different ways. I figured that combining the power of OpenCanary and it's modules with cool Docker networking functions would be interesting. The default configuration for this image is running just a few services with a basic PyLogger setup.
 
 ## Building the image
 ```
@@ -27,3 +27,10 @@ $ docker exec -it opencanary bash -c 'cat /var/log/opencanary.log'
 
 ## Logs
 As you can see from the above docker run command we are storing logs in **/var/log/opencanary.log**. You may find it necessary to create a separate volume structure for your log data.
+
+## Additional documentation
+Read OpenCanary documentaton [here](http://opencanary.readthedocs.io/en/latest/)
+
+## More
+* [Bring Back the Honeypots](https://www.youtube.com/watch?v=W7U2u-qLAB8)
+* [OpenCanary: a new Python-based honeypot](https://www.youtube.com/watch?v=lXhypJUbxVM)
