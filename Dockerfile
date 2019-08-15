@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install --yes sudo vim build-essential tcpdump lib
 
 RUN mkdir -p /opt/opencanary &&  virtualenv -p python /opt/opencanary/virtualenv \
   && source /opt/opencanary/virtualenv/bin/activate \
+  && pip install -U pip \
   && pip install opencanary \
   && pip install scapy pcapy
 
